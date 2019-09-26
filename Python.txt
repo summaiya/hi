@@ -1,0 +1,16 @@
+DataType = ["int","float","double","char","long","bool","string","decimal"]
+input = input("Enter any Datatype name: ")
+for x in range(len(DataType)):
+ if input==DataType[x]:
+      print("It's a DataType")
+         if 'int'==input:
+             print("It's a int DataType")
+             break
+          if "float"==DataType[x]:
+             print("It's a float DataType")
+             break
+          if "string"==DataType[x]:
+             print("It's a string DataType")
+             break
+ else:
+     print("It's a unknown keyword")
