@@ -1,0 +1,29 @@
+import re
+pattern = [a-zA-Z]
+number = [0-9]
+datatype = {'int''integer is a datatype','float''float is a datatype','char''character is a datatype', 'string''string is adatatype','long''long is a datatype', 'double''double is adatatype','bool''bool is a datatype'}
+symbols = {'+''addition operator','-''subtraction operator','''multiplication operator','''division operator','''floor division operator','=''assignment operator', '==''equal operator','!=''not equal operator', '''less then and grater then','''greter then operator','''less then operator', '=''less then and equal to', '=''greater then and equal','+=''addition and assignment operator','-=''subtraction and assignment operator', '=''multiplication and assignment operator','=''division and assignment operator', '%=''modulus and assignment operator', '=''floor division and assignment operator','&''AND operator','''OR operator','^''XOR operator', '`''ones complement operator','''binary right shift operator','''binary left shift operator', 'not''not operator',';''Line Terminator'}
+if len(datatype)  len(symbols)
+    count=datatype
+else
+    count=symbols
+x=input('Enter a tokenn')
+token = x.split(' ')
+for j in token
+    for i in count
+        if j in datatype
+            print(j, datatype[j])
+            break
+        elif j in symbols
+            print(j, symbols[j])
+            break
+        elif re.match(pattern,j)
+            print(j+' is identifier')
+            break
+        elif re.match(number,j)
+            print(j+' is number')
+            break
+        else
+            print('Not Found')
+            break
+        
